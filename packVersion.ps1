@@ -12,6 +12,10 @@ $WebRespone = Invoke-WebRequest $checksum64Url
 $checksum64 = $WebRespone.ToString()
 
 (Get-Content tools/chocolateyinstall.ps1) `
+    -replace '#REPLACE_VERSION#', $version |
+  Out-File tools/chocolateyinstall.ps1
+
+(Get-Content tools/chocolateyinstall.ps1) `
     -replace '#REPLACE_CHECKSUM#', $checksum `
     -replace '#REPLACE_CHECKSUM_64#', $checksum64 |
   Out-File tools/chocolateyinstall.ps1

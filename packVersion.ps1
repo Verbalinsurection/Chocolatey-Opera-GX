@@ -1,4 +1,4 @@
-$version = '63.0.3368.56078'
+$version = '63.0.3368.56786'
 
 $checksumUrl = 'https://get.geo.opera.com/pub/opera_gx/' + $version + '/win/Opera_GX_' + $version + '_Setup.exe.sha256sum'
 $checksum64Url = 'https://get.geo.opera.com/pub/opera_gx/' + $version + '/win/Opera_GX_' + $version + '_Setup_x64.exe.sha256sum'
@@ -25,3 +25,16 @@ $checksum64 = $WebRespone.ToString()
 Out-File operagx.nuspec
 
 choco pack
+
+(Get-Content tools/chocolateyinstall.ps1) `
+    -replace $version, '#REPLACE_VERSION#' |
+  Out-File tools/chocolateyinstall.ps1
+
+(Get-Content tools/chocolateyinstall.ps1) `
+    -replace $checksum, '#REPLACE_CHECKSUM#' `
+    -replace $checksum64, '#REPLACE_CHECKSUM_64#' |
+  Out-File tools/chocolateyinstall.ps1
+
+(Get-Content operagx.nuspec) `
+    -replace $version, '#REPLACE_VERSION#' |
+Out-File operagx.nuspec

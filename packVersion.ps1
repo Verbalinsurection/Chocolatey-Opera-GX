@@ -1,4 +1,4 @@
-$version = '63.0.3368.56786'
+$version = '64.0.3417.146'
 
 $checksumUrl = 'https://get.geo.opera.com/pub/opera_gx/' + $version + '/win/Opera_GX_' + $version + '_Setup.exe.sha256sum'
 $checksum64Url = 'https://get.geo.opera.com/pub/opera_gx/' + $version + '/win/Opera_GX_' + $version + '_Setup_x64.exe.sha256sum'

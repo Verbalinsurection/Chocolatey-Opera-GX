@@ -1,20 +1,12 @@
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$version = '#REPLACE_VERSION#'
-
 $checksum   = "#REPLACE_CHECKSUM#"
 $checksum64 = "#REPLACE_CHECKSUM_64#"
-
-Write-Output "Checksums for Version $version"
-Write-Output "$checksum"
-Write-Output "$checksum64"
-
-$url        = 'https://get.geo.opera.com/pub/opera_gx/' + $version + '/win/Opera_GX_' + $version + '_Setup.exe'
-$url64      = 'https://get.geo.opera.com/pub/opera_gx/' + $version + '/win/Opera_GX_' + $version + '_Setup_x64.exe'
+$url        = "#REPLACE_URL#"
+$url64      = "#REPLACE_URL_64#"
 
 $pp = Get-PackageParameters
- 
 $parameters += if ($pp.NoDesktopShortcut)     { " /desktopshortcut=0"; Write-Host "Desktop shortcut won't be created" }
 $parameters += if ($pp.NoTaskbarShortcut)     { " /pintotaskbar=0"; Write-Host "Opera won't be pinned to taskbar" }
 

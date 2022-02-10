@@ -3,34 +3,50 @@
    <metadata>
       <id>opera-gx</id>
       <version>#REPLACE_VERSION#</version>
-      <packageSourceUrl>https://github.com/Y0ngg4n/Chocolatey-Opera-GX</packageSourceUrl>
-      <owners>Yonggan</owners>
+      <packageSourceUrl>https://github.com/Verbalinsurection/Chocolatey-Opera-GX</packageSourceUrl>
+      <owners>Verbalinsurection,Yonggan</owners>
       <title>Opera GX (Install)</title>
       <authors>Opera</authors>
       <projectUrl>https://www.opera.com/gx</projectUrl>
-      <iconUrl>https://cdn.statically.io/gh/Y0ngg4n/Chocolatey-Opera-GX/f568d1c2/icon.png</iconUrl>
+      <iconUrl>https://cdn.statically.io/gh/Verbalinsurection/Chocolatey-Opera-GX/f568d1c2/icon.png</iconUrl>
       <licenseUrl>https://www.opera.com/eula/computers/eea</licenseUrl>
       <requireLicenseAcceptance>true</requireLicenseAcceptance>
       <docsUrl>https://help.opera.com/en/latest/</docsUrl>
       <mailingListUrl>https://forums.opera.com/category/50/opera-gx</mailingListUrl>
       <bugTrackerUrl>https://bugs.opera.com/wizard/</bugTrackerUrl>
-      <tags>browser opera operagx gx cross-platform internet admin</tags>
-      <summary>The Opera web browser makes the Web fast and fun, giving you a better web browser experience on any computer. Opera GX provides a integrated CPU, RAM and traffic limiter.</summary>
+      <tags>browser opera operagx gx cross-platform internet</tags>
+      <summary>The browser for gamers. Get an unparalleled gaming and browsing experience on mobile and desktop. Set limits on CPU, RAM, and Network usage, use Discord and Twitch from the sidebar, and connect mobile and desktop browsers with the file-sharing Flow feature.</summary>
       <description>## Features
-Opera GX is specially developed as a Gaming Browser. 
-It differs from normal Opera with this Features:
- - It provides a integrated CPU, RAM and traffic limiter.
- - You can get Notifications about new Twitch Streams in the Twitch Sidebar.
- - At "GX Corner" you can follow newest Game Releases.
- - Opera GX has integrated Sound Effects for all Actions.
- - You can choose the Color of the Icons in the Sidebar.
- - Startpage background Videos and Themes
- - Video-Pop-Out
- Coming Soon:
- - Video Overlay over Games
+### Custom Themes
+Completely customize your color scheme with Opera GX to match your gaming setup. Choose from specially designed themes, and easily select GX desktop wallpapers as a gaming background.
+### Light and Dark modes
+Brighten up your day with light mode, now available in the Opera GX mobile and desktop browsers. Browse the light or dark side and switch between them as needed.
+### GX Corner
+Get free games, the best deals, plus a game-release calendar and gaming news all in one place. GX Corner in the mobile browser also delivers free mobile games and the best game suggestions.
+### Twitch
+Never miss a live stream. With Twitch right in your sidebar, you can easily see the channels you follow, who's online, and choose to receive notifications whenever someone you follow goes live.
+### Discord
+Talk with your teams, friends and communities with Discord in your sidebar. Join us on Discord to talk about gaming, give feedback on GX, and have fun with the Opera GX community.
+### Player
+A world of music and podcasts at your fingertips. Connect to all your music services in one place, and switch between them easily.
+### Messengers
+Chat and browse at the same time with Facebook Messenger, Telegram, Vkontakte, and WhatsApp integrated right into the sidebar.
+### Pinboards
+Save and collect web content easily, share it visually. Collect pictures, links, music, files and notes to create builds, compare hardware deals, or plan the ultimate gaming den - in easily shareable, eye-pleasing boards.
+### Flow
+Just scan a QR code to connect your computer and mobile browsers with Flow. Send links, videos, files and notes to yourself in a single click, and access them instantly on all your devices.
+### Fast Navigation
+Choose between the Fast Action Button (FAB) and standard navigation in your Opera GX mobile browser. The FAB is always in thumb's reach and provides haptic feedback - perfect when you're on the move.
+### Force dark pages (beta)
+Enable dark mode on any page to match your GX browser and relax your eyes.
+### Video pop-out
+Detach online videos to watch on top of other windows while you continue browsing.
+### Free VPN
+Control your privacy and security with the free integrated browser VPN.
+### Ad blocker
+Browse with less headaches and load websites faster with the built-in ad blocker.
 
 ## Parameters
-
 -   `/NoDesktopShortcut`  - Do not create desktop shortcut for Opera
 -   `/NoTaskbarShortcut`  - Do not pin Opera to taskbar
 

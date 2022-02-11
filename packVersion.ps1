@@ -1,3 +1,8 @@
+param (
+	[Alias('f')]
+    [switch]$force = $false
+)
+
 function ReplaceInFile {
   param (
     [string[]]$FilePath,
@@ -76,7 +81,7 @@ Write-Output "Chocolatey version  : $actualVersion"
 Write-Output "Opera repo version  : $($latestRelease.Version)"
 
 ## Check if packaging is needed ##
-if($latestRelease.Version -like $actualVersion) {
+if($latestRelease.Version -like $actualVersion -And !$force) {
   Write-Warning "No new version available"
   exit
 }

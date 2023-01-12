@@ -105,8 +105,10 @@ ReplaceInFile -FilePath $installScriptPath `
               -TargetText $latestRelease.SHA32, $latestRelease.SHA64, $latestRelease.URL32, $latestRelease.URL64
 
 ## Pack choco package ##
+$confirmation = Read-Host "Start packing [Y/n]?"
+$confirmation = ('y',$confirmation)[[bool]$confirmation]
+if($confirmation -eq 'n') {exit}
 choco pack
-# Read-Host -Prompt "Press any key to continue"
 
 ## Reverse files modifications ##
 ReplaceInFile -FilePath $nuspecPath `
@@ -116,3 +118,10 @@ ReplaceInFile -FilePath $nuspecPath `
 ReplaceInFile -FilePath $installScriptPath `
               -SrcText $latestRelease.SHA32, $latestRelease.SHA64, $latestRelease.URL32, $latestRelease.URL64 `
               -TargetText '#REPLACE_CHECKSUM#', '#REPLACE_CHECKSUM_64#', '#REPLACE_URL#', '#REPLACE_URL_64#'
+
+## Push choco package ##
+$confirmation = Read-Host "Push package [Y/n]?"
+$confirmation = ('y',$confirmation)[[bool]$confirmation]
+if($confirmation -eq 'n') {exit}
+$packFileName = $packageId + '.' + $latestRelease.Version + '.nupkg'
+choco push $($packFileName)
